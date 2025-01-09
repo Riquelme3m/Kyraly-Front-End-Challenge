@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belleza Pura</title>
+
+    <!-- font awsome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+</head>
+<body>
+
+<!-- header section start page -->
+<section id="header" class="header">
+<a href="#" class="logo"><i class="fas fa-female"></i>  Belleza Pura</a>
+<nav class="navbar">
+    <a href="#home">Menu</a>
+    <a href="#about">Sobre Nós</a>
+    <a href="#shop">Produtos</a>
+    <a href="#message">Contato</a>
+    
+</nav>
+
+<div class="icons">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-shopping-cart"></a>
+</div>
+</section>
+
+<!-- header section ends -->
+
+<!-- home section starts -->
+
+<section class="home" id="home">
+
+    <div class="slide active" style="background:url(img/home-bg-1\ \(2\).jpg) no-repeat; background-size:cover;
+    background-position: center;">
+    <div class="content">
+        <span>Beleza<br>e Sustentabilidade</span>
+        <h3>Oferecendo produtos de alta qualidade de maneira sustentável</h3>
+         <a href="#" class="btn">Saiba Mais</a>
+    </div>
+    </div>
+
+    <div class="slide" style="background:url(img/home-2.jpg) no-repeat; background-size:cover;
+    background-position: center;">
+   <div class="content">
+    <span>Beleza<br>e Sustentabilidade</span>
+    <h3>Oferecendo produtos de alta qualidade de maneira sustentável</h3>
+     <a href="#" class="btn">Saiba Mais</a>
+</div>
+    </div>
+
+    <div class="slide" style="background:url(img/home-3.jpg) no-repeat; background-size:cover;
+    background-position: center;">
+    <div class="content">
+      <span>Beleza<br>e Sustentabilidade</span>
+      <h3>Oferecendo produtos de alta qualidade de maneira sustentável</h3>
+       <a href="#" class="btn">Saiba Mais</a>
+  </div>
+    </div>
+
+    <div id="next-slide" onclick="next()" class="fas fa-angle-right"></div>
+    <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- category section starts -->
+
+<section class="category">
+    <div class="box-container">
+
+        <a href="#" class="box">
+            <img decoding="async" src="img/category-1.png">
+            <h3>skincare</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img decoding="async" src="img/category-2.png">
+            <h3>lábios</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img decoding="async" src="img/category-3.png">
+            <h3>Cabelo</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img decoding="async" src="img/category-4.png">
+            <h3>Olhos</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img decoding="async" src="img/category-5.png">
+            <h3>Maquiagem</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img decoding="async" src="img/category-6.png">
+            <h3>Perfumes</h3>
+        </a>
+
+    </div>
+</section>
+<!-- category section ends -->
+
+<!-- about section starts -->
+
+<section class="about" id="about">
+    <div class="img">
+        <img decoding="async" src="img/about-img.webp" alt="">
+    </div>
+    <div class="content">
+        <div class="box">
+            <h3>Sobre<span> Nós</span></h3>
+            <p>Na Belleza Pura, acreditamos que a verdadeira beleza vem de dentro e deve ser celebrada com responsabilidade. Somos uma marca dedicada a oferecer cosméticos sustentáveis, com fórmulas inovadoras e eficazes, desenvolvidas especialmente para realçar a beleza natural de cada pessoa.
+
+              Nossa missão é transformar a forma como as pessoas cuidam de si mesmas, proporcionando produtos que não apenas embelezam, mas também respeitam o meio ambiente. Nossos cosméticos são 100% veganos, livres de crueldade e feitos com ingredientes selecionados de fontes responsáveis.</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+        
+    </div>
+</section>
+
+<!-- about section ends -->
+
+<!-- shop section starts -->
+
+<section class="shop" id="shop">
+    <h1 class="heading"><span>Produtos</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="img">
+                <img decoding="async" src="img/product-1.jpg">
+                <div class="icons">
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Produto 1</h3>
+                <div class="price">R$40-<span>R$200.99</span></div>
+                <a href="#" class="btn">Adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img decoding="async" src="img/product-2.jpeg">
+                <div class="icons">
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Produto 2</h3>
+                <div class="price">R$40-<span>R$200.99</span></div>
+                <a href="#" class="btn">Adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img decoding="async" src="img/product-3.jpg">
+                <div class="icons">
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Produto 3</h3>
+                <div class="price">R$40-<span>R$200.99</span></div>
+                <a href="#" class="btn">Adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img decoding="async" src="img/product-4.jpg">
+                <div class="icons">
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Produto 4</h3>
+                <div class="price">R$40-<span>R$200.99</span></div>
+                <a href="#" class="btn">Adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img decoding="async" src="img/product-5.jpeg">
+                <div class="icons">
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Produto 5</h3>
+                <div class="price">R$40-<span>R$200.99</span></div>
+                <a href="#" class="btn">Adicionar ao carrinho</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="img">
+                <img decoding="async" src="img/product-6.jpg">
+                <div class="icons">
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Produto 6</h3>
+                <div class="price">R$40-<span>R$200.99</span></div>
+                <a href="#" class="btn">Adicionar ao carrinho</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="img">
+                <img decoding="async" src="img/product-2.jpeg">
+                <div class="icons">
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Produto 7</h3>
+                <div class="price">R$40-<span>R$200.99</span></div>
+                <a href="#" class="btn">Adicionar ao carrinho</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="img">
+                <img decoding="async" src="img/product-5.jpeg">
+                <div class="icons">
+                    <a href="#" class="fas fa-eye"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Produto 8</h3>
+                <div class="price">R$40-<span>R$200.99</span></div>
+                <a href="#" class="btn">Adicionar ao carrinho</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- shop section ends -->
+
+
+
+
+
+<!-- message section starts -->
+<section class="message" id="message">
+    <form action="">
+        <h3><span>Entre em </span>Contato</h3>
+        <input type="text" placeholder="Nome Completo" class="box">
+        <input type="email" placeholder="Email" class="box">
+        <textarea placeholder="Mensagem" class="box" cols="30" rows="10"></textarea>
+        <input type="submit" value="Enviar" class="btn">
+    </form>
+</section>
+
+<!-- message section ends -->
+
+
+
+
+<!-- footer section starts -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        
+
+        <div class="box">
+            <h3>Contato</h3>
+            <a class="link" href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a class="link" href="#"> <i class="fas fa-envelope"></i> bellezapura@gmail.com </a>
+            <a class="link" href="#"> <i class="fas fa-map"></i>São Paulo</a>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div class="credit"> Criado por<span> Beleza Pura</span> || todos direitos reservados</div>
+
+</section>
+
+
+
+<!-- custom js file link -->
+<script src="main.js"></script>
+
+</body>
+</html>

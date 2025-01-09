@@ -1,0 +1,631 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+
+/* Reseta os estilos padrão e define o comportamento global */
+*{
+    font-family: 'Roboto', sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize; /* Faz as primeiras letras das palavras maiúsculas */
+    transition: all .2s linear; /* Efeito de transição suave para todas as propriedades */
+}
+
+/* Estilos gerais para o HTML */
+html{
+    font-size: 62.5%; /* Reduz o tamanho da fonte para facilitar o uso de rem */
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+    scroll-behavior: smooth; /* Rolagem suave */
+    scroll-padding-top: 7rem; /* Ajusta o preenchimento superior ao rolar */
+}
+
+/* Customização da barra de rolagem */
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar{
+    width:1rem; /* Largura da barra de rolagem */
+}
+html::-webkit-scrollbar-thumb{
+    background: #F08080; /* Cor da barra de rolagem */
+}
+
+/* Seções com preenchimento */
+section{
+    padding:3rem 9%; /* Preenchimento nas seções */
+}
+
+/* Cor para o texto dentro de spans */
+span{
+    color:#F08080;
+}
+
+/* Estilos do cabeçalho principal */
+.heading{
+    text-align: center;
+    color: #222;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+/* Botão geral */
+.btn{
+    display:inline-block;
+    margin-top:1rem;
+    padding:1rem 3rem;
+    color:#222;
+    font-size:1.7rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.7); /* Sombras ao redor do botão */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+}
+
+/* Efeito de hover nos botões */
+.btn:hover{
+    letter-spacing: .1rem;
+    background: #F08080;
+    color: #fff;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(-4rem) scale(0.4); /* Início da animação */
+    }
+}
+
+/* Estilos do cabeçalho fixo */
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1); /* Sombras do cabeçalho */
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 9%;
+}
+
+/* Logo no cabeçalho */
+.header .logo{
+    font-size: 2.5rem;
+    color: #222;
+    font-weight: bolder;
+}
+.header .logo i{
+    color: #F08080;
+}
+
+/* Navegação no cabeçalho */
+.header .navbar a{
+    margin: 0 1.5rem;
+    font-size: 1.7rem;
+    color: #222;
+}
+
+/* Efeito de hover nos links de navegação */
+.header .navbar a:hover{
+    color: #F08080;
+}
+
+/* Estilos dos ícones na barra de navegação */
+.header .icons div,
+.header .icons a{
+    height: 4.5rem;
+    width:4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 1.7rem;
+    color: #222;
+    margin-left: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Efeito de hover nos ícones */
+.header .icons a:hover,
+.header .icons div:hover{
+    background: #F08080;
+    color: #fff;
+}
+
+/* Estilo do botão de menu (escondido em telas maiores) */
+.header #menu-btn{
+    display: none;
+}
+
+/* Seção inicial (home) */
+.home{
+    position: relative;
+    padding:0;
+}
+
+/* Slides na seção inicial */
+.home .slide{
+    padding: 3rem;
+    display: flex;
+    min-height: 90vh;
+    display:none;
+}
+
+/* Estilos do conteúdo do slide */
+.home .slide .content{
+    margin:60;
+    text-align: left;
+    padding-top:18rem;
+}
+
+/* Slide ativo (visível) */
+.home .slide.active{
+    display:flex;
+}
+
+/* Estilos para o texto dentro dos slides */
+.home .slide .content span{
+    color: #fff;
+    display:block;
+    font-size: 9rem;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    animation: fadeIn .2s linear backwards;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+/* Efeito de hover no texto do slide */
+.home .slide .content span:hover{
+    color: #F08080;
+}
+
+/* Estilos para o subtítulo do slide */
+.home .slide .content h3{
+    font-size:1.7rem;
+    color: #fff;
+    text-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    animation: fadeIn .2s linear backwards .4s;
+    letter-spacing: .1rem;
+    font-weight: normal;
+}
+
+/* Botão dentro do slide */
+.home .slide .content .btn{
+    animation: fadeIn .2s linear backwards .6s;
+}
+
+/* Botões de navegação entre os slides */
+.home #next-slide,
+.home #prev-slide{
+    height:5rem;
+    width:5rem;
+    line-height:4.5rem;
+    font-size:2.5rem;
+    color: #222;
+    background: transparent;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.9);
+    cursor: pointer;
+    position: absolute;
+    bottom:2rem;
+    right:2rem;
+    text-align: center;
+}
+
+/* Efeito de hover nos botões de navegação */
+.home #next-slide:hover,
+.home #prev-slide:hover{
+    background: #F08080;
+    color: #fff;
+}
+
+/* Estilos do botão de navegação anterior */
+.home #prev-slide{
+    right:8rem;
+}
+
+/* Seção de categorias */
+.category .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); /* Ajusta para várias colunas */
+    gap:2rem;
+}
+
+.category .box-container .box{
+    text-align:center;
+}
+
+/* Efeito de hover no título das categorias */
+.category .box-container .box:hover h3{
+    color: #F08080;
+}
+
+/* Estilos para as imagens das categorias */
+.category .box-container .box img{
+    height:14rem;
+    margin-bottom:1rem;
+}
+
+/* Título das categorias */
+.category .box-container .box h3{
+    font-size:1.7rem;
+    color: #222;
+    font-weight: bold;
+}
+
+/* Seção sobre (about) */
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+/* Imagem na seção sobre */
+.about .img{
+    flex: 1 1 42rem;
+    padding-bottom: 5rem;
+    padding-right: 5rem;
+}
+.about .img img{
+    width: 100%;
+    box-shadow: 4rem 4rem 0 #eee;
+}
+
+/* Conteúdo da seção sobre */
+.about .content{
+    flex: 1 1 42rem;
+}
+
+/* Caixa de conteúdo na seção sobre */
+.about .content .box{
+    padding: 3rem;
+    background: #eee;
+}
+
+/* Título dentro da caixa de conteúdo */
+.about .content .box h3{
+    font-size:2.5rem;
+    color: #222;
+}
+
+/* Parágrafo dentro da caixa de conteúdo */
+.about .content .box p{
+    padding: 1rem 0;
+    line-height: 2;
+    color: #666;
+    font-size:1.4rem;
+}
+
+/* Ícones na seção sobre */
+.about .content .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Ícones dentro da caixa de conteúdo */
+.about .content .icons-container .icons{
+    flex: 1 1 16rem;
+    background: #eee;
+    padding:2rem;
+    text-align: center;
+}
+.about .content .icons-container .icons i{
+    color: #F08080;
+    margin-bottom: 1rem;
+    font-size: 5rem;
+}
+.about .content .icons-container .icons p{
+    color: #222;
+    font-size: 1.5rem;
+}
+
+/* Estilos gerais da loja */
+.shop {
+    color: #eee; /* Cor geral do texto dentro da seção de loja */
+}
+
+/* Grid para exibir os produtos em várias colunas */
+.shop .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr)); /* Define colunas responsivas */
+    gap: 2rem; /* Espaçamento entre os itens */
+}
+
+/* Cada item de produto */
+.shop .box-container .box {
+    text-align: center;
+    background: #fff; /* Cor de fundo */
+    border: 0.2rem solid #222; /* Borda da caixa */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sombras sutis */
+}
+
+/* Efeito ao passar o mouse sobre a imagem */
+.shop .box-container .box:hover .img img {
+    transform: scale(1.1); /* Aumenta a imagem */
+}
+
+/* Efeito ao passar o mouse sobre os ícones */
+.shop .box-container .box:hover .img .icons {
+    transform: translateX(0rem); /* Move os ícones para sua posição original */
+}
+
+/* Estilos da imagem do produto */
+.shop .box-container .box .img {
+    position: relative;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+}
+
+/* Imagem do produto */
+.shop .box-container .box .img img {
+    height: 25rem; /* Define a altura da imagem */
+}
+
+/* Ícones que aparecem na imagem */
+.shop .box-container .box .img .icons {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    transform: translateX(-10rem); /* Inicialmente escondido */
+}
+
+/* Estilo para os links dentro dos ícones */
+.shop .box-container .box .img .icons a {
+    display: block;
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    color: #222;
+    border-radius: 0.2rem solid #222;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+/* Efeito ao passar o mouse sobre os links dos ícones */
+.shop .box-container .box .img .icons a:hover {
+    color: #fff;
+    background: #F08080; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo da descrição do produto */
+.shop .box-container .box .content {
+    padding: 2rem;
+}
+
+/* Título do produto */
+.shop .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #222;
+    padding-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+/* Preço do produto */
+.shop .box-container .box .content .price {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #F08080; /* Cor do preço */
+}
+
+/* Preço riscado (caso haja desconto) */
+.shop .box-container .box .content .price span {
+    color: #666;
+    font-size: 1.7rem;
+    text-decoration: line-through; /* Risca o preço anterior */
+}
+
+/* Estilos do banner */
+.banner {
+    background: url(img/contact.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo da caixa de conteúdo do banner */
+.banner .content {
+    max-width: 40rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    margin: 10rem 0;
+}
+
+/* Estilo do texto dentro do banner */
+.banner .content span {
+    font-size: 2rem;
+}
+
+/* Título dentro do banner */
+.banner .content h3 {
+    font-size: 3rem;
+    color: #222;
+    padding-top: 0.5rem;
+}
+
+/* Parágrafo dentro do banner */
+.banner .content p {
+    font-size: 1.4rem;
+    color: #666;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+/* Estilos da mensagem (formulário) */
+.message {
+    background: url(img/contact.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 3rem 2rem;
+}
+
+/* Formulário da mensagem */
+.message form {
+    margin: 2rem auto;
+    background: #fff;
+    text-align: center;
+    max-width: 40rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+/* Título do formulário */
+.message form h3 {
+    font-size: 3rem;
+    color: #222;
+}
+
+/* Campo de input dentro do formulário */
+.message form .box {
+    width: 100%;
+    padding: 1.5rem 0;
+    margin: 0.7rem 0;
+    font-size: 1.6rem;
+    color: #666;
+    text-transform: none;
+    border-radius: 0.2rem solid #222;
+}
+
+/* Efeito ao focar nos campos de input */
+.message form .box:focus {
+    border-color: #F08080;
+}
+
+/* Textarea dentro do formulário */
+.message form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+/* Estilos do rodapé */
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* Organiza o rodapé em várias colunas */
+    gap: 2rem;
+}
+
+/* Cabeçalho das seções do rodapé */
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    color: #222;
+    padding: 1rem 0;
+}
+
+/* Links no rodapé */
+.footer .box-container .box .link {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: #666;
+    display: block;
+}
+
+/* Ícones ao lado dos links */
+.footer .box-container .box .link i {
+    padding-right: 0.5rem;
+    color: #F08080;
+}
+
+/* Efeito ao passar o mouse nos links */
+.footer .box-container .box .link:hover {
+    color: #F08080;
+}
+
+.footer .box-container .box .link:hover i {
+    padding-right: 2rem;
+}
+
+/* Estilo para as redes sociais compartilháveis no rodapé */
+.footer .box-container .box .share {
+    margin-top: 2rem;
+}
+
+.footer .box-container .box .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+    background: #eee;
+    text-align: center;
+    color: #222;
+    margin-right: 0.5rem;
+}
+
+/* Efeito ao passar o mouse nos links das redes sociais */
+.footer .box-container .box .share a:hover {
+    color: #fff;
+    background: #F08080;
+}
+
+/* Parágrafo no rodapé */
+.footer .box-container .box p {
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    color: #666;
+}
+
+/* Campo de email no rodapé */
+.footer .box-container .box form .email {
+    border: 0.2rem solid #222;
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    text-transform: none;
+    color: #666;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+}
+
+/* Créditos no rodapé */
+.footer .credit {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    border-top: 0.2rem solid #222;
+    color: #666;
+}
+
+/* Media Queries - Responsividade */
+
+/* Ajustes para telas maiores que 768px */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    section {
+        padding: 3rem 2rem;
+    }
+}
+
+/* Ajustes para dispositivos menores */
+@media (max-width: 768px) {
+    .header #menu-btn {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 0.2rem solid #222;
+        border-bottom: 0.2rem solid #222;
+        padding: 0.2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active {
+        clip-path: polygon(0 )
+    }
+}
