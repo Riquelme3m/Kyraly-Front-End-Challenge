@@ -14,7 +14,7 @@
 
 ### Links
 
-- Solution URL: [https://riquelme3m.github.io/iJunior-Blog-Preview-Card/](https://riquelme3m.github.io/iJunior-Blog-Preview-Card/)
+- Solution URL: [https://riquelme3m.github.io/Kyraly-Front-End-Challenge/](https://riquelme3m.github.io/Kyraly-Front-End-Challenge/)
 
 ### Built With
 
